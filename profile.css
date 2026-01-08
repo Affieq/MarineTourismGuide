@@ -1,0 +1,92 @@
+/* ============================================
+   PROFILE PAGE - BOOTSTRAP ENHANCED
+   ============================================ */
+
+/* Avatar styling */
+.avatar-circle {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* List group customization */
+.list-group-item {
+    border: none;
+    padding: 1rem 1.25rem;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.list-group-item:hover {
+    background-color: var(--bg-gray);
+}
+
+.list-group-item.active {
+    background-color: #eff6ff;
+    color: var(--primary);
+    font-weight: 600;
+    border-left: 3px solid var(--primary);
+}
+
+/* Form styling */
+.form-control:disabled {
+    background-color: var(--bg-gray);
+    border-color: var(--border);
+    color: var(--text-gray);
+}
+
+/* Form switch customization */
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Card hover effect */
+.card {
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg-3, .col-lg-9 {
+        width: 100%;
+    }
+    
+    .avatar-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .avatar-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .d-flex.justify-content-end {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

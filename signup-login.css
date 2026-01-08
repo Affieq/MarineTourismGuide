@@ -1,0 +1,85 @@
+/* ============================================
+   AUTH PAGE - BOOTSTRAP ENHANCED
+   ============================================ */
+
+/* Card styling */
+.card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+/* Tab styling */
+.nav-tabs {
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: var(--text-gray);
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary);
+    background-color: var(--bg-gray);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    background-color: white;
+    border-bottom: 3px solid var(--primary);
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+}
+
+/* Button styling */
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+
+/* Tab content animation */
+.tab-pane {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Link styling */
+.text-decoration-none:hover {
+    text-decoration: underline !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin: 0 15px;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 0.75rem;
+        font-size: 14px;
+    }
+    
+    .btn-primary {
+        padding: 0.625rem 1.25rem;
+    }
+}

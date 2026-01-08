@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary - Marine Tourism Guide</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="order-summary.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- HEADER - Bootstrap Navbar -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="home.html">
+                    <!-- Logo Image -->
+                    <img src="logo.webp" alt="Marine Tourism Guide Logo" class="logo-image me-2" height="40">
+                    <span class="site-name">Marine Tourism Guide</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="search-package.html">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-booking.html">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white px-3 ms-2" href="signup-login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Progress Steps -->
+            <div class="mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="display-5 fw-bold mb-0">Order Summary</h1>
+                    <div class="text-end">
+                        <div class="badge bg-primary px-3 py-2">Step 2 of 3</div>
+                        <p class="text-muted small mb-0">Review & Billing → Payment → Confirmation</p>
+                    </div>
+                </div>
+
+                <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 66%"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Left Column - Booking & Billing -->
+                <div class="col-lg-8">
+                    <!-- Package Summary -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white">
+                            <h2 class="h5 fw-bold mb-0">Booking Details</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 mb-3 mb-md-0">
+                                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=200&fit=crop"
+                                        class="img-fluid rounded" alt="Scuba Diving" id="bookingPackageImage">
+                                </div>
+                                <div class="col-md-9">
+                                    <h3 class="h5 fw-bold mb-2" id="bookingPackageTitle">Scuba Diving - Pulau Perhentian
+                                    </h3>
+                                    <p class="text-muted mb-3">Explore vibrant coral reefs in crystal clear waters</p>
+
+                                    <div class="row">
+                                        <div class="col-md-4 mb-2">
+                                            <small class="text-muted d-block">Duration</small>
+                                            <span class="fw-medium" id="bookingDuration">5 Days / 4 Nights</span>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <small class="text-muted d-block">Dates</small>
+                                            <span class="fw-medium">15-20 March 2026</span>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <small class="text-muted d-block">Location</small>
+                                            <span class="fw-medium" id="bookingLocation">Pulau Perhentian</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <small class="text-muted d-block">Booking ID</small>
+                                    <span class="fw-medium">BDG001</span>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <small class="text-muted d-block">Booking Date</small>
+                                    <span class="fw-medium">8 January 2026</span>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <small class="text-muted d-block">Travel Date</small>
+                                    <span class="fw-medium">15-20 March 2026</span>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <small class="text-muted d-block">Guests</small>
+                                    <span class="fw-medium" id="bookingGuests">2 Adults</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Billing Information -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white">
+                            <h2 class="h5 fw-bold mb-0">Billing Information</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="billingForm" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="billingName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="billingName" placeholder="Full Name"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Please enter your full name.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="billingEmail" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="billingEmail"
+                                            placeholder="you@example.com" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="billingPhone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="billingPhone"
+                                            placeholder="+60 123 456 789" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid phone number.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="billingAddress" class="form-label">Billing Address</label>
+                                        <input type="text" class="form-control" id="billingAddress"
+                                            placeholder="Street Address" required>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="billingCity" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="billingCity" placeholder="City"
+                                            required>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="billingState" class="form-label">State/Province</label>
+                                        <input type="text" class="form-control" id="billingState"
+                                            placeholder="State/Province" required>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="billingZip" class="form-label">ZIP/Postal Code</label>
+                                        <input type="text" class="form-control" id="billingZip"
+                                            placeholder="ZIP/Postal Code" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="billingCountry" class="form-label">Country</label>
+                                        <select class="form-select" id="billingCountry" required>
+                                            <option value="MY" selected>Malaysia</option>
+                                            <option value="TH">Thailand</option>
+                                            <option value="BRU">Brunei</option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="saveBilling" checked>
+                                            <label class="form-check-label" for="saveBilling">
+                                                Save this billing information for future bookings
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Order Summary -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 100px;">
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-header bg-white">
+                                <h2 class="h5 fw-bold mb-0">Order Summary</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted" id="summaryBasePriceLabel">Package Price (2
+                                            Adults)</span>
+                                        <span class="fw-medium" id="summaryBasePrice">$998.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Service Fee</span>
+                                        <span class="fw-medium" id="summaryServiceFee">$49.90</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Tax (8%)</span>
+                                        <span class="fw-medium" id="summaryTax">$79.84</span>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="text-muted fw-medium mb-0">Total Amount</span>
+                                        <span class="h3 fw-bold text-primary mb-0" id="summaryTotal">$1,027.94</span>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Terms & Conditions -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and
+                                            <a href="#" class="text-primary">Cancellation Policy</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Buttons -->
+                                <div class="d-grid gap-2 mb-4">
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        onclick="window.history.back()">
+                                        <i class="bi bi-arrow-left"></i> Back to Package
+                                    </button>
+                                    <button type="button" class="btn btn-primary btn-lg" onclick="proceedToPayment()">
+                                        Proceed to Payment <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Security Badges -->
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center gap-3 mb-2">
+                                        <span class="badge bg-light text-dark border"><i class="bi bi-shield-check"></i>
+                                            Secure Payment</span>
+                                        <span class="badge bg-light text-dark border"><i class="bi bi-lock"></i> SSL
+                                            Encrypted</span>
+                                    </div>
+                                    <small class="text-muted">Your payment information is secure and encrypted</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Need Help Card -->
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-question-circle display-6 text-primary mb-3"></i>
+                                <h3 class="h6 fw-bold mb-2">Need Help?</h3>
+                                <p class="text-muted small mb-3">Our support team is available 24/7</p>
+                                <a href="tel:+15551234567" class="btn btn-outline-primary btn-sm w-100">
+                                    <i class="bi bi-telephone"></i> +60 1888 999
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Footer Logo Image -->
+                        <img src="logo.webp" alt="Marine Tourism Guide Logo" class="footer-logo-image me-2" height="35">
+                        <span class="h5 mb-0 fw-bold text-white">Marine Tourism Guide</span>
+                    </div>
+                    <p class="text-light mb-0">Your gateway to Malaysian island adventures</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="search-package.html"
+                                class="text-light text-decoration-none">Packages</a></li>
+                        <li class="mb-2"><a href="my-booking.html" class="text-light text-decoration-none">My
+                                Bookings</a></li>
+                        <li><a href="profile.html" class="text-light text-decoration-none">Profile</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="text-light">
+                                <i class="bi bi-envelope me-2"></i>info@marinetourismguide.com
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text-light">
+                                <i class="bi bi-phone me-2"></i>+60 1888 999
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light my-4">
+
+            <div class="text-center text-light">
+                <p class="mb-0">&copy; 2026 Marine Tourism Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="order-summary.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Packages - Marine Toursm Guide</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="search-package.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- HEADER - Bootstrap Navbar -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="home.html">
+                    <!-- Logo Image -->
+                    <img src="logo.webp" alt="Marine Tourism Guide Logo" class="logo-image me-2" height="40">
+                    <span class="site-name">Marine Tourism Guide</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="search-package.html">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-booking.html">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white px-3 ms-2" href="signup-login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold mb-3">Find Your Ocean Adventure</h1>
+                <p class="lead text-muted">Browse and filter our marine tourism packages</p>
+            </div>
+
+            <!-- Filter Card -->
+            <div class="card border-0 shadow-lg mb-5">
+                <div class="card-header bg-white py-4">
+                    <h2 class="h4 fw-bold mb-0">Filter Packages</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form id="filterForm" class="row g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <label for="destination" class="form-label fw-medium">Island Destination</label>
+                            <select class="form-select" id="destination">
+                                <option value="">All Islands</option>
+                                <option value="perhentian">Pulau Perhentian</option>
+                                <option value="redang">Pulau Redang</option>
+                                <option value="tioman">Pulau Tioman</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <label for="activity" class="form-label fw-medium">Activity</label>
+                            <select class="form-select" id="activity">
+                                <option value="">All Activities</option>
+                                <option value="scuba">Scuba Diving</option>
+                                <option value="snorkeling">Snorkeling</option>
+                                <option value="island-hopping">Island Hopping</option>
+                                <option value="beach">Beach Relaxation</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <label for="duration" class="form-label fw-medium">Duration</label>
+                            <select class="form-select" id="duration">
+                                <option value="">Any Duration</option>
+                                <option value="1-2">1-2 Days</option>
+                                <option value="3-4">3-4 Days</option>
+                                <option value="5+">5+ Days</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <label for="price-range" class="form-label fw-medium">Price Range</label>
+                            <select class="form-select" id="price-range">
+                                <option value="">Any Price</option>
+                                <option value="0-300">RM 0 - 300</option>
+                                <option value="301-600">RM 301 - 600</option>
+                                <option value="601-1000">RM 601 - 1000</option>
+                                <option value="1001+">RM 1000+</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="reset" class="btn btn-outline-secondary px-4">Clear Filters</button>
+                                <button type="submit" class="btn btn-primary px-4">Search Packages</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search Results - Updated for Malaysia Islands -->
+            <div class="mt-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h3 fw-bold mb-0">Malaysian Island Packages</h2>
+                    <span class="text-muted" id="resultsCount">Showing 6 packages</span>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Package 1 - Pulau Perhentian -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <div class="position-relative overflow-hidden">
+                                <img src="snork.jpeg" class="card-img-top" alt="Pulau Perhentian">
+                                <span
+                                    class="position-absolute top-0 end-0 m-3 bg-primary text-white px-3 py-1 rounded-pill small fw-bold">Popular</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">Scuba Diving - Pulau Perhentian</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Terengganu</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>3 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.8</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="h4 fw-bold text-primary">RM 450</span>
+                                        <span class="text-muted text-decoration-line-through ms-2">RM 550</span>
+                                    </div>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 2 - Pulau Redang -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <img src="snork2.jpeg" class="card-img-top" alt="Pulau Redang">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">Snorkeling - Pulau Redang</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Terengganu</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>4 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.7</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h4 fw-bold text-primary">RM 380</span>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 3 - Pulau Tioman -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <img src="hoping.jpeg" class="card-img-top" alt="Pulau Tioman">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">Island Hopping - Pulau Tioman</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Pahang</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>5 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.9</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="h4 fw-bold text-primary">RM 520</span>
+                                        <span class="text-muted text-decoration-line-through ms-2">RM 620</span>
+                                    </div>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 4 - Pulau Perhentian -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <img src="perhentian.jpeg" class="card-img-top" alt="Beach Relaxation">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">Beach Resort - Pulau Perhentian</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Terengganu</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>2 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.6</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h4 fw-bold text-primary">RM 280</span>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 5 - Pulau Redang -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <img src="scuba.jpeg" class="card-img-top" alt="Diving Course">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">PADI Course - Pulau Redang</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Terengganu</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>6 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.5</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h4 fw-bold text-primary">RM 850</span>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 6 - Pulau Tioman -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm package-card">
+                            <img src="jetski.jpeg" class="card-img-top" alt="Water Sports">
+                            <div class="card-body">
+                                <h3 class="card-title h5 fw-bold mb-2">Water Sports - Pulau Tioman</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <span class="text-muted small"><i class="bi bi-geo-alt me-1"></i>Pahang</span>
+                                    <span class="text-muted small"><i class="bi bi-clock me-1"></i>3 Days</span>
+                                    <span class="text-muted small"><i
+                                            class="bi bi-star-fill text-warning me-1"></i>4.8</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="h4 fw-bold text-primary">RM 320</span>
+                                        <span class="text-muted text-decoration-line-through ms-2">RM 400</span>
+                                    </div>
+                                    <a href="order-summary.html" class="btn btn-primary btn-sm px-3">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Footer Logo Image -->
+                        <img src="logo.webp" alt="Marine Tourism Guide Logo" class="footer-logo-image me-2" height="35">
+                        <span class="h5 mb-0 fw-bold text-white">Marine Tourism Guide</span>
+                    </div>
+                    <p class="text-light mb-0">Your gateway to Malaysian island adventures</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="search-package.html"
+                                class="text-light text-decoration-none">Packages</a></li>
+                        <li class="mb-2"><a href="my-booking.html" class="text-light text-decoration-none">My
+                                Bookings</a></li>
+                        <li><a href="profile.html" class="text-light text-decoration-none">Profile</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="text-light">
+                                <i class="bi bi-envelope me-2"></i>info@marinetourismguide.com
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text-light">
+                                <i class="bi bi-phone me-2"></i>+60 1888 999
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light my-4">
+
+            <div class="text-center text-light">
+                <p class="mb-0">&copy; 2026 Marine Tourism Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="search-package.js"></script>
+</body>
+
+</html>

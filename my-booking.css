@@ -1,0 +1,92 @@
+/* ============================================
+   MY BOOKING PAGE - BOOTSTRAP ENHANCED
+   ============================================ */
+
+.booking-card {
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.booking-card:hover {
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+/* Custom tab styling */
+.nav-tabs .nav-link {
+    color: var(--text-gray);
+    font-weight: 500;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px 8px 0 0;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    background-color: rgba(37, 99, 235, 0.1);
+    border-bottom: 3px solid var(--primary);
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    background-color: var(--bg-gray);
+}
+
+/* Status badges */
+.badge.bg-success, .badge.bg-info {
+    background-color: var(--primary) !important;
+}
+
+/* Modal customization */
+.modal-content {
+    border-radius: var(--radius);
+    border: none;
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    border-color: #fde68a;
+    color: #92400e;
+}
+
+/* Empty state */
+.display-1 {
+    font-size: 5rem;
+    opacity: 0.5;
+}
+
+/* Booking images */
+.booking-card img {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Animation for tab content */
+.tab-pane {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .booking-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .booking-card .d-flex.gap-2 {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

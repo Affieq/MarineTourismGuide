@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt - Marine Tourism Guide</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="receipt.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- HEADER - Bootstrap Navbar -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="home.html">
+                    <!-- Logo Image -->
+                    <img src="logo.webp" alt="Marine Tourism Guide Logo" class="logo-image me-2" height="40">
+                    <span class="site-name">Marine Tourism Guide</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="search-package.html">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-booking.html">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white px-3 ms-2" href="signup-login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Success Header -->
+                    <div class="card border-0 shadow-sm mb-4 border-success border-3">
+                        <div class="card-body text-center py-5">
+                            <div class="success-icon mx-auto mb-4">
+                                <i class="bi bi-check-circle display-1 text-success"></i>
+                            </div>
+                            <h1 class="display-6 fw-bold mb-3">Booking Confirmed!</h1>
+                            <p class="lead text-muted mb-4">Your ocean adventure has been successfully booked</p>
+                            <div class="badge bg-success-subtle text-success fs-6 px-4 py-2">
+                                <i class="bi bi-check-circle me-2"></i> Confirmation Sent to Email
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Receipt Card -->
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-white py-4 border-bottom">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-ship logo-icon me-2"></i>
+                                        <div>
+                                            <h2 class="h4 fw-bold mb-0">Marine Tourism Guide</h2>
+                                            <p class="text-muted mb-0">Your gateway to ocean adventures</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                    <div class="row">
+                                        <div class="col-6 col-md-12">
+                                            <small class="text-muted d-block">Receipt No</small>
+                                            <span class="fw-bold">MP-2026-001</span>
+                                        </div>
+                                        <div class="col-6 col-md-12 mt-2 mt-md-1">
+                                            <small class="text-muted d-block">Date</small>
+                                            <span class="fw-bold">8 January 2026</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <!-- Booking Details -->
+                            <div class="mb-5">
+                                <h3 class="h5 fw-bold mb-4 border-bottom pb-3">Booking Details</h3>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Booking ID</small>
+                                        <span class="fw-medium">BDG001</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Package</small>
+                                        <span class="fw-medium">Scuba Diving - Pulau Perhentian</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Travel Dates</small>
+                                        <span class="fw-medium">15-20 March 2026 (5 Days)</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Guests</small>
+                                        <span class="fw-medium">2 Adults</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small class="text-muted d-block">Location</small>
+                                        <span class="fw-medium">Pulau Perhentian</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small class="text-muted d-block">Instructor</small>
+                                        <span class="fw-medium">Captain Mat</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Summary -->
+                            <div class="mb-5">
+                                <h3 class="h5 fw-bold mb-4 border-bottom pb-3">Payment Summary</h3>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="mb-4">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span class="text-muted">Package Price (2 Adults)</span>
+                                                <span class="fw-medium">RM450.00</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span class="text-muted">Service Fee</span>
+                                                <span class="fw-medium">RM30.00</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span class="text-muted">Tax (8%)</span>
+                                                <span class="fw-medium">RM10.00</span>
+                                            </div>
+
+
+                                            <div
+                                                class="d-flex justify-content-between align-items-center py-3 border-top">
+                                                <span class="h5 fw-bold mb-0">Total Paid</span>
+                                                <span class="display-5 fw-bold text-primary">RM445.00</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <small class="text-muted d-block">Payment Method</small>
+                                                <span class="fw-medium">Credit Card ending in 3456</span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted d-block">Payment Date</small>
+                                                <span class="fw-medium">8 January 2026, 14:30 EST</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Information -->
+                            <div class="mb-5">
+                                <h3 class="h5 fw-bold mb-4 border-bottom pb-3">Customer Information</h3>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Name</small>
+                                        <span class="fw-medium">Name</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Email</small>
+                                        <span class="fw-medium">name@example.com</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Phone</small>
+                                        <span class="fw-medium">+60 1234 555</span>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <small class="text-muted d-block">Billing Address</small>
+                                        <span class="fw-medium">No.9,Taman Baiduri,Terengganu</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Next Steps -->
+                            <div class="mb-5">
+                                <h3 class="h5 fw-bold mb-4 border-bottom pb-3">Next Steps</h3>
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                style="width: 50px; height: 50px;">
+                                                1
+                                            </div>
+                                            <h4 class="h6 fw-bold mb-2">Check Email</h4>
+                                            <p class="text-muted small">Confirmation sent to name@example.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                style="width: 50px; height: 50px;">
+                                                2
+                                            </div>
+                                            <h4 class="h6 fw-bold mb-2">Prepare for Trip</h4>
+                                            <p class="text-muted small">Review packing list in confirmation email</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                                style="width: 50px; height: 50px;">
+                                                3
+                                            </div>
+                                            <h4 class="h6 fw-bold mb-2">24/7 Support</h4>
+                                            <p class="text-muted small">Contact support@marinetourismguide.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Important Notes -->
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold mb-4 border-bottom pb-3">Important Notes</h3>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle text-success me-2"></i>
+                                                Check-in starts at 9:00 AM on your departure date
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle text-success me-2"></i>
+                                                Please bring valid ID and diving certification
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle text-success me-2"></i>
+                                                Cancellation policy: Full refund 30+ days before
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check-circle text-success me-2"></i>
+                                                Travel insurance is recommended for all bookings
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex flex-wrap gap-3 mb-4">
+                                <button class="btn btn-outline-primary" onclick="printReceipt()">
+                                    <i class="bi bi-printer me-2"></i> Print Receipt
+                                </button>
+                                <button class="btn btn-outline-primary" onclick="downloadReceipt()">
+                                    <i class="bi bi-download me-2"></i> Download PDF
+                                </button>
+                                <a href="my-booking.html" class="btn btn-primary">
+                                    <i class="bi bi-journal-text me-2"></i> View My Bookings
+                                </a>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="text-center py-4 border-top">
+                                <p class="text-muted mb-2">Thank you for choosing Marine Tourism Guide for your ocean
+                                    adventure!</p>
+                                <p class="text-muted mb-0">
+                                    For any questions, contact us at
+                                    <a href="mailto:support@marinetourismguide.com"
+                                        class="text-primary text-decoration-none">
+                                        support@marinetourismguide.com
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-4">
+                            <a href="search-package.html"
+                                class="card border-0 shadow-sm text-decoration-none h-100 link-card">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-compass display-5 text-primary mb-3"></i>
+                                    <h4 class="h6 fw-bold mb-2">Book Another Adventure</h4>
+                                    <p class="text-muted small mb-0">Explore more ocean experiences</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="profile.html" class="card border-0 shadow-sm text-decoration-none h-100 link-card">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-person display-5 text-primary mb-3"></i>
+                                    <h4 class="h6 fw-bold mb-2">Update Profile</h4>
+                                    <p class="text-muted small mb-0">Manage your account details</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="home.html" class="card border-0 shadow-sm text-decoration-none h-100 link-card">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-house display-5 text-primary mb-3"></i>
+                                    <h4 class="h6 fw-bold mb-2">Return Home</h4>
+                                    <p class="text-muted small mb-0">Back to Marine Tourism Guide</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Footer Logo Image -->
+                        <img src="logo.webp" alt="Marine Tourism Guide Logo" class="footer-logo-image me-2" height="35">
+                        <span class="h5 mb-0 fw-bold text-white">Marine Tourism Guide</span>
+                    </div>
+                    <p class="text-light mb-0">Your gateway to Malaysian island adventures</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="search-package.html"
+                                class="text-light text-decoration-none">Packages</a></li>
+                        <li class="mb-2"><a href="my-booking.html" class="text-light text-decoration-none">My
+                                Bookings</a></li>
+                        <li><a href="profile.html" class="text-light text-decoration-none">Profile</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="text-light">
+                                <i class="bi bi-envelope me-2"></i>info@marinetourismguide.com
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text-light">
+                                <i class="bi bi-phone me-2"></i>+60 1888 999
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-light my-4">
+
+            <div class="text-center text-light">
+                <p class="mb-0">&copy; 2026 Marine Tourism Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="receipt.js"></script>
+
+    </body>
+
+</html>

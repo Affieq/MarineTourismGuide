@@ -1,0 +1,107 @@
+/* ============================================
+   ORDER SUMMARY PAGE - BOOTSTRAP ENHANCED
+   ============================================ */
+
+/* Progress bar styling */
+.progress {
+    border-radius: 10px;
+    background-color: var(--bg-gray);
+}
+
+.progress-bar {
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+
+/* Card styling */
+.card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.card-header {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Form styling */
+.form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--bg-white);
+}
+
+/* User Interaction Effect - Transparent Grey Blur */
+.form-control:focus,
+.form-select:focus,
+.form-control:not(:placeholder-shown),
+.form-select:not(:placeholder-shown) {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+    background-color: rgba(128, 128, 128, 0.05);
+    /* Very light grey transparency */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Price display */
+.display-6 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Security badges */
+.badge.bg-light {
+    background-color: var(--bg-gray) !important;
+    border: 1px solid var(--border);
+    color: var(--text-dark) !important;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* Need help card */
+.card .display-6 {
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+/* Sticky sidebar */
+.sticky-top {
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sticky-top {
+        position: static !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .display-6 {
+        font-size: 1.75rem;
+    }
+
+    .progress {
+        height: 6px;
+    }
+}

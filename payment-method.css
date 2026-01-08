@@ -1,0 +1,131 @@
+/* ============================================
+   PAYMENT METHOD PAGE - BOOTSTRAP ENHANCED
+   ============================================ */
+
+/* Nav pills styling */
+.nav-pills .nav-link {
+    color: var(--text-dark);
+    background-color: var(--bg-gray);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #e5e7eb;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Tab content animation */
+.tab-pane {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card input styling */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+}
+
+/* Payment summary card */
+.card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.card-header {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 1.5rem;
+}
+
+/* Display for total amount */
+.display-6 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Security icons */
+.fs-4 {
+    font-size: 1.5rem;
+}
+
+/* Accepted cards styling */
+.bi-credit-card-2-front,
+.bi-credit-card,
+.bi-paypal,
+.bi-bank {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.bi-credit-card-2-front:hover,
+.bi-credit-card:hover,
+.bi-paypal:hover,
+.bi-bank:hover {
+    opacity: 1;
+}
+
+/* Processing modal */
+.modal-content {
+    border-radius: var(--radius);
+    border: none;
+}
+
+.spinner-border {
+    --bs-spinner-width: 3rem;
+    --bs-spinner-height: 3rem;
+    --bs-spinner-border-width: 0.25rem;
+}
+
+/* Bank transfer details */
+.font-monospace {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* Alert styling */
+.alert-info {
+    background-color: #eff6ff;
+    border-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-pills .nav-link {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
+    
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    
+    .sticky-top {
+        position: static !important;
+    }
+}

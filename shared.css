@@ -1,0 +1,342 @@
+/* ============================================
+   MINIMALIST SHARED STYLES - BOOTSTRAP COMPATIBLE
+   ============================================ */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+    --text-light: #9ca3af;
+    --bg-white: #ffffff;
+    --bg-gray: #f9fafb;
+    --border: #e5e7eb;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+
+
+/* Override Bootstrap colors to match our theme */
+:root {
+    --bs-primary: #2563eb;
+    --bs-primary-rgb: 37, 99, 235;
+    --bs-secondary: #6b7280;
+    --bs-secondary-rgb: 107, 114, 128;
+    --bs-success: #10b981;
+    --bs-success-rgb: 16, 185, 129;
+    --bs-info: #3b82f6;
+    --bs-info-rgb: 59, 130, 246;
+    --bs-warning: #f59e0b;
+    --bs-warning-rgb: 245, 158, 11;
+    --bs-danger: #ef4444;
+    --bs-danger-rgb: 239, 68, 68;
+    --bs-light: #f9fafb;
+    --bs-light-rgb: 249, 250, 251;
+    --bs-dark: #1f2937;
+    --bs-dark-rgb: 31, 41, 55;
+    --bs-border-color: #e5e7eb;
+}
+
+/* NEW LOGO STYLING WITH ICON */
+.logo-icon {
+    font-size: 2rem;
+    /* Adjust size as needed */
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.logo-icon:hover {
+    transform: scale(1.05);
+    color: var(--primary-dark);
+}
+
+/* For footer */
+.footer-logo-icon {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+
+    .footer-logo-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Bootstrap overrides */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.bg-light {
+    background-color: var(--bg-gray) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border {
+    border-color: var(--border) !important;
+}
+
+/* Custom components that don't conflict with Bootstrap */
+.logo-icon-container {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: var(--transition);
+    margin-right: 10px;
+}
+
+.logo-icon-container:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: var(--shadow);
+}
+
+/* The icon inside */
+.logo-icon-container i {
+    color: white;
+}
+
+/* For footer */
+.footer-logo-icon-container {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Site name styling */
+.site-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-icon-container {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+    }
+
+    .footer-logo-icon-container {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+
+    .site-name {
+        font-size: 1.1rem;
+    }
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.nav-login {
+    background: var(--primary);
+    color: white !important;
+    margin-left: 8px;
+}
+
+.nav-login:hover {
+    background: var(--primary-dark);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-gray {
+    background: var(--bg-gray);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: var(--text-gray);
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+}
+
+/*logo ship*------------------------------------------------------>>>>>>>/
+/* Add to shared.css after existing logo styles */
+
+/* Logo Image Styling */
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Logo Image */
+.footer-logo-image {
+    height: 35px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    /* Makes logo white for dark background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 32px;
+    }
+
+    .footer-logo-image {
+        height: 28px;
+    }
+}
